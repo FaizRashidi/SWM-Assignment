@@ -1,7 +1,1 @@
-My first file
-
-Some addition 
-
-Another addition
-
-LOLOL
+This will be the repository for the group project.
