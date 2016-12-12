@@ -17,31 +17,32 @@ import com.neet.DiamondHunter.Main.GamePanel;
 public class TileMap {
 	
 	// position
-	private int x;
-	private int y;
+	private int x; //position of the player
+	private int y; //position of the player
 	private int xdest;
 	private int ydest;
-	private int speed;
+	private int speed; //speed of the map
 	private boolean moving;
 	
-	// bounds
+	// bounds for the camera scrolling
 	private int xmin;
 	private int ymin;
 	private int xmax;
 	private int ymax;
 	
 	// map
-	private int[][] map;
-	private int tileSize;
-	private int numRows;
-	private int numCols;
-	private int width;
-	private int height;
+	private int[][] map; //2d array which represents a tile from the tileset
+	private int tileSize; //Size of a single tile in pixel
+	private int numRows; //Number of rows in the map
+	private int numCols; //Number of colummns in the map
+	private int width; //dimension of the map in pixels
+	private int height; //"
 	
 	// tileset
-	private BufferedImage tileset;
-	private int numTilesAcross;
-	private Tile[][] tiles;
+	private BufferedImage tileset; //ENTIRE TILESET IMAGE
+	private int numTilesAcross; //"ID" number of the tiles
+	private Tile[][] tiles; //each individual tiles were read, 
+							//and stored in tiles array
 	
 	// drawing
 	private int rowOffset;
@@ -66,14 +67,24 @@ public class TileMap {
 			numTilesAcross = tileset.getWidth() / tileSize;
 			tiles = new Tile[2][numTilesAcross];
 			
+			//tileset.getwidth = 320
+			//tileSize = 16
+			//numTileAcross = 20
+			
+			System.out.println(tileset.getWidth());
+			System.out.println(tileSize);
+			System.out.println(numTilesAcross);
+			
 			BufferedImage subimage;
 			for(int col = 0; col < numTilesAcross; col++) {
 				subimage = tileset.getSubimage(
-							col * tileSize,
-							0,
-							tileSize,
-							tileSize
+							col * tileSize, //x - axis
+							0, // y - axis
+							tileSize, //width
+							tileSize //height
 						);
+				
+				// NORMAL is non-blockable tileset 1,2,3
 				tiles[0][col] = new Tile(subimage, Tile.NORMAL);
 				subimage = tileset.getSubimage(
 							col * tileSize,
@@ -81,6 +92,8 @@ public class TileMap {
 							tileSize,
 							tileSize
 						);
+				
+				// BLOCKED is blockable tileset = 22,20,21
 				tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
 			}
 			
