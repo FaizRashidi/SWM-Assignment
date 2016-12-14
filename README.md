@@ -5,6 +5,6 @@ Group Members/ Collaborators:
 
 Muhammad Faiz Bin Mohd Rashidi
 
-Eza Shaznie 
+Muhamad Eza Shaznie bin Elias
 
 Ahmad Zakwan Bin Amir
