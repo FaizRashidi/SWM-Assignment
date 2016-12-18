@@ -50,19 +50,29 @@ public class TileMap {
 	private int numRowsToDraw;
 	private int numColsToDraw;
 	
+	//Dimension
+	public void setHeight(){
+		
+	}
+	
+	// Tilesize is defined when the constructor is invoked
+	// Rows and columns is defined from the game panel
 	public TileMap(int tileSize) {
 		this.tileSize = tileSize;
-		numRowsToDraw = GamePanel.HEIGHT / tileSize + 2;
-		numColsToDraw = GamePanel.WIDTH / tileSize + 2;
+		numRowsToDraw = GamePanel.HEIGHT / tileSize + 2; //Left & right border of the game
+		numColsToDraw = GamePanel.WIDTH / tileSize + 2; //Top & bottom border of the game
 		speed = 4;
 	}
 	
-	public void loadTiles(String s) {
+	// Read from the tileset.gif
+	// Setting the tiles coordinate and assign the subimaged tile with it
+	// so that the loadMap will be loaded based on the coordinate
+	public void loadTiles(String tileSetFile) {
 		
 		try {
 
 			tileset = ImageIO.read(
-				getClass().getResourceAsStream(s)
+				getClass().getResourceAsStream(tileSetFile)
 			);
 			numTilesAcross = tileset.getWidth() / tileSize;
 			tiles = new Tile[2][numTilesAcross];
@@ -71,28 +81,32 @@ public class TileMap {
 			//tileSize = 16
 			//numTileAcross = 20
 			
-			System.out.println(tileset.getWidth());
-			System.out.println(tileSize);
-			System.out.println(numTilesAcross);
+			//System.out.println(tileset.getWidth());
+			//System.out.println(tileSize);
+			//System.out.println(numTilesAcross);
 			
+			//To read from the Tile set and reference it 
+			//so that the tiles[][] array can be assigned into it
 			BufferedImage subimage;
 			for(int col = 0; col < numTilesAcross; col++) {
-				subimage = tileset.getSubimage(
-							col * tileSize, //x - axis
-							0, // y - axis
-							tileSize, //width
-							tileSize //height
-						);
 				
+				//Cut an image from the tileset
+				subimage = tileset.getSubimage(
+							col * tileSize, //x - axis of the upper left corner
+							0, // y - axis "
+							tileSize, //width of the specified rectangular shape
+							tileSize //height "
+						);		
 				// NORMAL is non-blockable tileset 1,2,3
 				tiles[0][col] = new Tile(subimage, Tile.NORMAL);
+				
+				//Cut an image from the tileset
 				subimage = tileset.getSubimage(
 							col * tileSize,
 							tileSize,
 							tileSize,
 							tileSize
-						);
-				
+						);	
 				// BLOCKED is blockable tileset = 22,20,21
 				tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
 			}
@@ -104,21 +118,27 @@ public class TileMap {
 		
 	}
 	
-	public void loadMap(String s) {
+	//Read the testMap.map file
+	public void loadMap(String testMapFile) {
 		
 		try {
 			
-			InputStream in = getClass().getResourceAsStream(s);
+			//Read the file name
+			InputStream in = getClass().getResourceAsStream(testMapFile);
 			BufferedReader br = new BufferedReader(
 						new InputStreamReader(in)
 					);
 			
-			numCols = Integer.parseInt(br.readLine());
-			numRows = Integer.parseInt(br.readLine());
-			map = new int[numRows][numCols];
-			width = numCols * tileSize;
-			height = numRows * tileSize;
+			numCols = Integer.parseInt(br.readLine()); //read lines and get total map columns
+			System.out.println(numCols);
+			numRows = Integer.parseInt(br.readLine()); //read lines and get total map rows
 			
+			map = new int[numRows][numCols]; //declared map coordinate form rows/columns
+			
+			width = numCols * tileSize; // Width of the map in pixels
+			height = numRows * tileSize; // height of the map in pixels
+			
+			//camera boundaries setting
 			xmin = GamePanel.WIDTH - width;
 			xmin = -width;
 			xmax = 0;
@@ -126,10 +146,16 @@ public class TileMap {
 			ymin = -height;
 			ymax = 0;
 			
-			String delims = "\\s+";
+			/*Reading the TestMap.map*/
+			
+			String delims = "\\s+"; //The "\\s" is to omit the whitespace each time the map is read
+			
 			for(int row = 0; row < numRows; row++) {
-				String line = br.readLine();
-				String[] tokens = line.split(delims);
+				
+				String line = br.readLine(); //Reading one line of numbers (rows)
+				String[] tokens = line.split(delims); //Splitting the lines by omitting the whitespace
+				
+				//While still in one row, multiple columns is assigned
 				for(int col = 0; col < numCols; col++) {
 					map[row][col] = Integer.parseInt(tokens[col]);
 				}
@@ -149,20 +175,24 @@ public class TileMap {
 	public int getHeight() { return height; }
 	public int getNumRows() { return numRows; }
 	public int getNumCols() { return numCols; }
+	
 	public int getType(int row, int col) {
 		int rc = map[row][col];
 		int r = rc / numTilesAcross;
 		int c = rc % numTilesAcross;
 		return tiles[r][c].getType();
 	}
+	
 	public int getIndex(int row, int col) {
 		return map[row][col];
 	}
+	
 	public boolean isMoving() { return moving; }
 	
 	public void setTile(int row, int col, int index) {
 		map[row][col] = index;
 	}
+	
 	public void replace(int i1, int i2) {
 		for(int row = 0; row < numRows; row++) {
 			for(int col = 0; col < numCols; col++) {
@@ -175,6 +205,8 @@ public class TileMap {
 		xdest = x;
 		ydest = y;
 	}
+	
+	//To set the initial position of the camera
 	public void setPositionImmediately(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -223,6 +255,7 @@ public class TileMap {
 		
 	}
 	
+	//Making the map 
 	public void draw(Graphics2D g) {
 		
 		for(int row = rowOffset; row < rowOffset + numRowsToDraw; row++) {
@@ -234,11 +267,15 @@ public class TileMap {
 				if(col >= numCols) break;
 				if(map[row][col] == 0) continue;
 				
+				//The numbers in the tilemap that have been read is translated into rc reference
+				//So that new coordinates can be drawn from the map coordinates.
 				int rc = map[row][col];
 				int r = rc / numTilesAcross;
 				int c = rc % numTilesAcross;
 				
 				g.drawImage(
+					
+					//Tiles is a numbered tileset.gif, and has been cropped
 					tiles[r][c].getImage(),
 					x + col * tileSize,
 					y + row * tileSize,
@@ -251,23 +288,26 @@ public class TileMap {
 		
 	}
 	
+	//To draw the map after the settings of data and dimensions have been inserted via loadTiles & loadMap 
+	public void drawMapViewer(Graphics2D g){
+		for(int row = 0; row <numRows; row++){
+			for( int col = 0; col <numCols; col++){
+								
+				int rc = map[row][col];
+				int r = rc / tiles[0].length;
+				int c = rc % tiles[0].length;
+				
+				g.drawImage(
+						tiles[r][c].getImage(),
+						x + col * tileSize,
+						y + row * tileSize,
+						null
+						);		
+				
+			}
+		}
+	}
+
+	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
