@@ -67,6 +67,8 @@ public abstract class Entity {
 		xmap = tileMap.getx();
 		ymap = tileMap.gety();
 	}
+	
+	//Sets the desired coordinate
 	public void setTilePosition(int i1, int i2) {
 		y = i1 * tileSize + tileSize / 2;
 		x = i2 * tileSize + tileSize / 2;

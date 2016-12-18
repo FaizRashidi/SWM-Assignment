@@ -43,6 +43,7 @@ public class Player extends Entity {
 	private boolean onWater;
 	private long ticks;
 	
+	//Constructor loads with map
 	public Player(TileMap tm) {
 		
 		super(tm);
