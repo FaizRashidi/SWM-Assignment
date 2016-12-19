@@ -1,49 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="393.0" prefWidth="354.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<AnchorPane prefHeight="393.0" prefWidth="409.0" stylesheets="@../../../../Desktop/Coursework%202/SWM-Assignment/Menu/src/application/application.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="296.0" fitWidth="95.0" layoutX="43.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Desktop/TUTORIAL_Diamond2.png" />
-         </image>
-         <effect>
-            <Blend opacity="0.27" />
-         </effect>
-      </ImageView>
-      <ImageView fitHeight="296.0" fitWidth="95.0" layoutX="268.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Desktop/TUTORIAL_Diamond2.png" />
-         </image>
-         <effect>
-            <Blend opacity="0.27" />
-         </effect>
-      </ImageView>
-      <ImageView fitHeight="296.0" fitWidth="95.0" layoutX="160.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../Desktop/TUTORIAL_Diamond2.png" />
-         </image>
-         <effect>
-            <Blend opacity="0.27" />
-         </effect>
-      </ImageView>
-      <Text layoutX="3.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" textAlignment="CENTER" wrappingWidth="400.0000030696392">
+      <Button layoutX="151.0" layoutY="221.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="103.0" style="-fx-background-color: #3399ff;" stylesheets="@../../../../Desktop/Coursework%202/SWM-Assignment/Menu/src/application/application.css" text="Play">
          <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
-      <Button layoutX="152.0" layoutY="262.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="103.0" text="Play">
-         <font>
-            <Font size="27.0" />
+            <Font name="Lucida Fax Demibold" size="27.0" />
          </font>
       </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3399ff" height="68.0" layoutY="1.0" stroke="#831616" strokeType="INSIDE" width="409.0" />
+      <Text layoutX="4.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" textAlignment="CENTER" wrappingWidth="400.0000030696392">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
