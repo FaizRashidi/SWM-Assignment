@@ -20,9 +20,9 @@
          </cursor>
       </Button>
       <Rectangle arcHeight="5.0" fill="SILVER" height="94.0" layoutY="-4.0" stroke="#831616" strokeType="INSIDE" width="514.0" AnchorPane.bottomAnchor="330.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0" />
-      <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="#030303" fontSmoothingType="LCD" layoutX="7.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="514.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="9.5">
+      <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="#030303" fontSmoothingType="LCD" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="514.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
          <font>
-            <Font name="Zorque-Regular" size="54.0" />
+            <Font name="SixEightZeroNineChargen-Regular" size="58.0" />
          </font>
       </Text>
       <ImageView fitHeight="150.0" fitWidth="145.0" layoutX="144.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">

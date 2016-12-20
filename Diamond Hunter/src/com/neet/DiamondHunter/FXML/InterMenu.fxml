@@ -8,12 +8,12 @@
    <children>
       <Button fx:id="skipButton" layoutX="134.0" layoutY="211.0" mnemonicParsing="false" onAction="#gameButtonPressed" prefHeight="69.0" prefWidth="192.0" text="Skip">
          <font>
-            <Font name="Lucida Fax Demibold" size="32.0" />
+            <Font name="SixEightZeroNineChargen-Regular" size="32.0" />
          </font>
       </Button>
       <Button fx:id="setMapButton" layoutX="130.0" layoutY="109.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="69.0" prefWidth="199.0" text="Set Map">
          <font>
-            <Font name="Lucida Fax Demibold" size="32.0" />
+            <Font name="SixEightZeroNineChargen-Regular" size="32.0" />
          </font>
       </Button>
    </children>
