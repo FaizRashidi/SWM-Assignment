@@ -15,7 +15,6 @@ import com.neet.DiamondHunter.GameState.MenuState;
 import com.neet.DiamondHunter.GameState.PauseState;
 import com.neet.DiamondHunter.GameState.PlayState;
 
-
 public class GameStateManager {
 	
 	private boolean paused;

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.Controllers.MapController">
+   <children>
+      <Canvas fx:id="canvas" height="650.0" layoutX="24.0" layoutY="14.0" width="681.0" />
+      <TextField fx:id="boatFieldX" layoutX="751.0" layoutY="197.0" />
+      <TextField fx:id="axeFieldX" layoutX="751.0" layoutY="349.0" />
+      <Button fx:id="playButton" layoutX="751.0" layoutY="472.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="70.0" prefWidth="104.0" text="Play!">
+         <font>
+            <Font name="Papyrus" size="21.0" />
+         </font>
+      </Button>
+      <TextField fx:id="warnField" layoutX="729.0" layoutY="562.0" prefHeight="70.0" prefWidth="149.0" />
+      <Text layoutX="782.0" layoutY="162.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Boat" textAlignment="CENTER" wrappingWidth="86.08203125">
+         <font>
+            <Font name="Papyrus" size="32.0" />
+         </font>
+      </Text>
+      <Text layoutX="787.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe" textAlignment="CENTER" wrappingWidth="76.08204472064972">
+         <font>
+            <Font name="Papyrus" size="32.0" />
+         </font>
+      </Text>
+      <TextField fx:id="boatFieldY" layoutX="751.0" layoutY="235.0" />
+      <TextField fx:id="axeFieldY" layoutX="751.0" layoutY="386.0" />
+      <Text layoutX="705.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+      <Text layoutX="705.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y" />
+      <Text layoutX="705.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X" />
+      <Text layoutX="705.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y" />
+   </children>
+</AnchorPane>

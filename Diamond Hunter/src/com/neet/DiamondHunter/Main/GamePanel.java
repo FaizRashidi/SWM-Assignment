@@ -19,7 +19,7 @@ import com.neet.DiamondHunter.Manager.Keys;
 
 @SuppressWarnings("serial")
 public class GamePanel extends JPanel implements Runnable, KeyListener {
-	
+		
 	// dimensions
 	// HEIGHT is the playing area size
 	// HEIGHT2 includes the bottom window
