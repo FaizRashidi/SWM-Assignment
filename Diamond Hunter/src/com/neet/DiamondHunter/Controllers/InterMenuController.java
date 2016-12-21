@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class InterMenuController {
@@ -34,6 +35,7 @@ public class InterMenuController {
     	//Loading the objects in the scene
     	Scene scene = new Scene(root);
     	scene.getStylesheets().add(getClass().getResource("/com/neet/DiamondHunter/CSS/MapViewer.css").toExternalForm());
+    	stage.getIcons().add(new Image("/Image/Diamond.jpg"));
     	stage.setTitle("Diamond Hunter Map Editor");
     	stage.setScene(scene);
     	stage.show();

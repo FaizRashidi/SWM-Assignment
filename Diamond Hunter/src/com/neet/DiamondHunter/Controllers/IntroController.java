@@ -17,7 +17,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class IntroController implements Initializable {
-
+	
+	//FXML declaration
     @FXML
     private Button playButton;
     @FXML
@@ -27,6 +28,7 @@ public class IntroController implements Initializable {
 
     Stage stage;
     
+    //Initialize the class
     @Override
     public void initialize(URL location, ResourceBundle resources) {
     	
@@ -47,6 +49,7 @@ public class IntroController implements Initializable {
     	//Loading the objects in the scene
     	Scene scene = new Scene(root);
     	scene.getStylesheets().add(getClass().getResource("/com/neet/DiamondHunter/CSS/InterMenu.css").toExternalForm());
+    	stage.getIcons().add(new Image("/Image/Diamond.jpg"));
     	stage.setScene(scene);
     	stage.show();
     }

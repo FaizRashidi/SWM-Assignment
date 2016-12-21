@@ -126,7 +126,7 @@ public class MapController implements Initializable {
 		
 		if (axeFieldX.getText() == null || axeFieldX.getText().trim().isEmpty() || axeFieldY.getText() == null || axeFieldY.getText().trim().isEmpty() || boatFieldX.getText() == null || boatFieldX.getText().trim().isEmpty() || boatFieldY.getText() == null || boatFieldY.getText().trim().isEmpty()) {
 			
-	        Alert fail= new Alert(AlertType.INFORMATION);
+	        Alert fail= new Alert(AlertType.ERROR);
 	        fail.setHeaderText("Error");
 	        fail.setContentText("Some fields have no input");
 	        fail.showAndWait();
@@ -144,7 +144,7 @@ public class MapController implements Initializable {
 	private void validatePosition() {
 
 		if(MapUtilities.newmaps[axePositionY][axePositionX] >= 20 || MapUtilities.newmaps[boatPositionY][boatPositionX] >= 20){
-	        Alert fail= new Alert(AlertType.INFORMATION);
+	        Alert fail= new Alert(AlertType.ERROR);
 	        fail.setHeaderText("Error");
 	        fail.setContentText("Position is blocked");
 	        fail.showAndWait();
@@ -177,6 +177,8 @@ public class MapController implements Initializable {
     	//Loading the objects in the scene
     	Scene scene = new Scene(root);
     	scene.getStylesheets().add(getClass().getResource("/com/neet/DiamondHunter/CSS/InterMenu.css").toExternalForm());
+    	stage.getIcons().add(new Image("/Image/Diamond.jpg"));
+    	stage.setTitle("Diamond Hunter");
     	stage.setScene(scene);
     	stage.show();
 	}
