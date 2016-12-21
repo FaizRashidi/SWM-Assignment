@@ -5,10 +5,16 @@
 }
 
 .button{
-	-fx-background-color: tan;
+	-fx-background-color: tan;	
 }
 
 .button:hover{
 	-fx-text-fill:whitesmoke;
 }
+
+@font-face{
+	font-family: Chargen;
+	src:url("/Font/6809 chargen.ttf");
+}
+
 

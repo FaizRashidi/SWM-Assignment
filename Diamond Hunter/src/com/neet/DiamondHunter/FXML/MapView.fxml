@@ -3,6 +3,7 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -12,28 +13,27 @@
    <children>
       <Canvas fx:id="canvas" height="650.0" layoutX="7.0" layoutY="14.0" width="681.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="132.0" layoutX="652.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="261.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="42.0" layoutX="735.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="42.0" layoutX="735.0" layoutY="424.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="42.0" layoutX="735.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
       <TextField fx:id="boatFieldX" layoutX="765.0" layoutY="291.0" prefWidth="50.0" />
-      <TextField fx:id="axeFieldX" layoutX="765.0" layoutY="399.0" prefWidth="50.0" />
-      <Button fx:id="playButton" layoutX="780.0" layoutY="472.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="70.0" prefWidth="104.0" text="Play!">
+      <TextField fx:id="axeFieldX" layoutX="765.0" layoutY="433.0" prefWidth="50.0" />
+      <Button fx:id="playButton" layoutX="815.0" layoutY="560.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="25.0" prefWidth="91.0" text="Play">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="21.0" />
          </font>
       </Button>
-      <TextField fx:id="warnField" layoutX="758.0" layoutY="560.0" prefHeight="70.0" prefWidth="149.0" />
       <Text layoutX="743.0" layoutY="269.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text=" Boat coordinate" textAlignment="CENTER" wrappingWidth="163.08203125">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="16.0" />
          </font>
       </Text>
-      <Text layoutX="751.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe coordinate" textAlignment="CENTER" wrappingWidth="148.99999737739563">
+      <Text layoutX="750.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe coordinate" textAlignment="CENTER" wrappingWidth="148.99999737739563">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="16.0" />
          </font>
       </Text>
       <TextField fx:id="boatFieldY" layoutX="855.0" layoutY="291.0" prefWidth="50.0" />
-      <TextField fx:id="axeFieldY" layoutX="855.0" layoutY="399.0" prefWidth="50.0" />
+      <TextField fx:id="axeFieldY" layoutX="855.0" layoutY="433.0" prefWidth="50.0" />
       <Text layoutX="749.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
@@ -42,11 +42,11 @@
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
          </font></Text>
-      <Text layoutX="747.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+      <Text layoutX="749.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
          </font></Text>
-      <Text layoutX="836.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
+      <Text layoutX="832.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
          <font>
             <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
          </font></Text>
@@ -55,5 +55,13 @@
             <Font name="SixEightZeroNineChargen-Regular" size="60.0" />
          </font>
       </Text>
+      <ImageView fitHeight="70.0" fitWidth="79.0" layoutX="656.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="backButton" layoutX="720.0" layoutY="560.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="91.0" text="Back">
+         <font>
+            <Font name="SixEightZeroNineChargen-Regular" size="21.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="boatImage" fitHeight="70.0" fitWidth="79.0" layoutX="641.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="axeImage" fitHeight="70.0" fitWidth="79.0" layoutX="641.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

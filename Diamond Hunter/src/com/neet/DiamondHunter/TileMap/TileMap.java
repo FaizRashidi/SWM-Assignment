@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 
 import javax.imageio.ImageIO;
 
-import com.neet.DiamondHunter.Main.GamePanel;
+import com.neet.DiamondHunter.Game.GamePanel;
 
 public class TileMap {
 	

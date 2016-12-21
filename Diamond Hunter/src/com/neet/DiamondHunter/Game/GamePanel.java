@@ -3,7 +3,7 @@
 // keeps the game moving forward.
 // This class is also the one that grabs key events.
 
-package com.neet.DiamondHunter.Main;
+package com.neet.DiamondHunter.Game;
 
 import java.awt.Dimension;
 import java.awt.Graphics;

@@ -3,7 +3,7 @@ package com.neet.DiamondHunter.Controllers;
 
 import java.io.IOException;
 
-import com.neet.DiamondHunter.Main.Game;
+import com.neet.DiamondHunter.Game.Game;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

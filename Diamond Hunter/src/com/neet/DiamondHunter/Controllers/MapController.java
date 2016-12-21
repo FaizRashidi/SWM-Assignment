@@ -3,7 +3,7 @@ package com.neet.DiamondHunter.Controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.neet.DiamondHunter.Main.Game;
+import com.neet.DiamondHunter.Game.Game;
 import com.neet.DiamondHunter.MapViewer.MapUtilities;
 
 import javafx.event.ActionEvent;
@@ -16,6 +16,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class MapController implements Initializable {
@@ -25,7 +26,10 @@ public class MapController implements Initializable {
     private Canvas canvas;
 
     @FXML
-    private Button playButton;
+    private Button playButton,backButton;
+    
+    @FXML
+    private ImageView boatImage,axeImage;
     
     @FXML
     private TextField boatFieldX,axeFieldX,warnField,boatFieldY,axeFieldY;
@@ -40,6 +44,8 @@ public class MapController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		Image image = new Image("/Image/");
 				
 		GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
 		

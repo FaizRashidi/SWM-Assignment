@@ -1,4 +1,4 @@
-package com.neet.DiamondHunter.Intro;
+package com.neet.DiamondHunter.MainExecutable;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

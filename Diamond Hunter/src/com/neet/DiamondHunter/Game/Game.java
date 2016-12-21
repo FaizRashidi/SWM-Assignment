@@ -2,7 +2,7 @@
 // This class loads up a JFrame window and
 // puts a GamePanel into it.
 
-package com.neet.DiamondHunter.Main;
+package com.neet.DiamondHunter.Game;
 
 import javax.swing.JFrame;
 
@@ -20,7 +20,7 @@ public class Game {
 		
 		window.setLocationRelativeTo(null);
 		window.setVisible(true);
-		window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 
 	}
