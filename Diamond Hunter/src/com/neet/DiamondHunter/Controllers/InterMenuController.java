@@ -34,6 +34,7 @@ public class InterMenuController {
     	//Loading the objects in the scene
     	Scene scene = new Scene(root);
     	scene.getStylesheets().add(getClass().getResource("/com/neet/DiamondHunter/CSS/MapViewer.css").toExternalForm());
+    	stage.setTitle("Diamond Hunter Map Editor");
     	stage.setScene(scene);
     	stage.show();
     	
