@@ -33,9 +33,9 @@
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <Button fx:id="playButton" layoutX="820.0" layoutY="590.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="25.0" prefWidth="91.0" text="Play">
+      <Button fx:id="playButton" layoutX="820.0" layoutY="590.0" mnemonicParsing="false" onAction="#clickPlay" prefHeight="42.0" prefWidth="91.0" text="Play">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="21.0" />
+            <Font name="Wide Latin" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -43,12 +43,12 @@
       </Button>
       <Text layoutX="731.0" layoutY="314.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text=" Boat coordinate" textAlignment="CENTER" wrappingWidth="163.08203125">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="16.0" />
+            <Font name="Lucida Fax Demibold" size="14.0" />
          </font>
       </Text>
       <Text layoutX="743.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Axe coordinate" textAlignment="CENTER" wrappingWidth="148.99999737739563">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="16.0" />
+            <Font name="Lucida Fax Demibold" size="14.0" />
          </font>
       </Text>
       <TextField fx:id="boatFieldY" layoutX="840.0" layoutY="322.0" prefWidth="50.0">
@@ -59,30 +59,30 @@
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <Text layoutX="732.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+      <Text layoutX="732.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
+            <Font name="Lucida Fax Demibold" size="12.0" />
          </font></Text>
       <Text layoutX="821.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
+            <Font name="Lucida Fax Demibold" size="12.0" />
          </font></Text>
       <Text layoutX="733.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
+            <Font name="Lucida Fax Demibold" size="12.0" />
          </font></Text>
       <Text layoutX="823.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
+            <Font name="Lucida Fax Demibold" size="12.0" />
          </font></Text>
       <Text layoutX="678.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To set for the coordinates, simply click on either of the images and click on the map . " wrappingWidth="232.00000083446503">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="13.0" />
+            <Font name="Lucida Fax Demibold" size="13.0" />
          </font>
       </Text>
       <Button fx:id="backButton" layoutX="721.0" layoutY="590.0" mnemonicParsing="false" onAction="#clickBack" prefHeight="42.0" prefWidth="91.0" text="Back">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="21.0" />
+            <Font name="Wide Latin" size="15.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -96,9 +96,9 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ImageView>
-      <Text layoutX="678.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can also set the coordinates manually by entering the correct numbers in the corresponding fields" wrappingWidth="231.99999398193904">
+      <Text layoutX="678.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can also set the coordinates manually by entering the correct numbers in the corresponding fields" wrappingWidth="231.99999398193904">
          <font>
-            <Font name="SixEightZeroNineChargen-Regular" size="12.0" />
+            <Font name="Lucida Fax Demibold" size="13.0" />
          </font>
       </Text>
       <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
