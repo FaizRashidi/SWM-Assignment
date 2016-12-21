@@ -12,7 +12,11 @@
 
 <AnchorPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neet.DiamondHunter.Controllers.InterMenuController">
    <children>
+<<<<<<< HEAD
       <Button fx:id="skipButton" layoutX="262.0" layoutY="274.0" mnemonicParsing="false" onAction="#gameButtonPressed" prefHeight="63.0" prefWidth="141.0" text="Skip">
+=======
+      <Button fx:id="skipButton" layoutX="262.0" layoutY="274.0" mnemonicParsing="false" onAction="#gameButtonPressed" prefHeight="36.0" prefWidth="141.0" text="Skip">
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
          <font>
             <Font name="Wide Latin" size="17.0" />
          </font>
@@ -22,13 +26,21 @@
       </Button>
       <Button fx:id="setMapButton" layoutX="56.0" layoutY="274.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="63.0" prefWidth="141.0" text="Set Map">
          <font>
+<<<<<<< HEAD
             <Font name="Wide Latin" size="17.0" />
+=======
+            <Font name="SixEightZeroNineChargen-Regular" size="24.0" />
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+<<<<<<< HEAD
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="200.0" layoutX="56.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+=======
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="SILVER" height="200.0" layoutX="56.0" layoutY="47.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="459.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
@@ -50,6 +62,7 @@
       </MenuBar>
       <Text fontSmoothingType="LCD" layoutX="71.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Diamond Hunter Game!" textAlignment="CENTER" wrappingWidth="316.2149658203125">
          <font>
+<<<<<<< HEAD
             <Font name="Wide Latin" size="22.0" />
          </font>
       </Text>
@@ -61,6 +74,19 @@
       <Text layoutX="72.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Or edit the Item's position?">
          <font>
             <Font name="Wide Latin" size="14.0" />
+=======
+            <Font name="SixEightZeroNineChargen-Regular" size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="71.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to skip to the game?">
+         <font>
+            <Font name="SixEightZeroNineChargen-Regular" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="127.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Or edit  the Item's position?">
+         <font>
+            <Font name="SixEightZeroNineChargen-Regular" size="14.0" />
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
          </font>
       </Text>
    </children>

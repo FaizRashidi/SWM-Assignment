@@ -12,7 +12,11 @@
    <children>
       <Button id="button" fx:id="playButton" alignment="CENTER" defaultButton="true" layoutX="355.0" layoutY="349.0" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="57.0" prefWidth="145.0" style="-fx-background-color: tan;" text="Play" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="349.0">
          <font>
+<<<<<<< HEAD
             <Font name="Wide Latin" size="22.0" />
+=======
+            <Font name="SixEightZeroNineChargen-Regular" size="15.0" />
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -21,7 +25,11 @@
       <Rectangle arcHeight="5.0" fill="SILVER" height="124.0" layoutY="-4.0" stroke="#831616" strokeType="INSIDE" width="514.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0" />
       <Text boundsType="LOGICAL_VERTICAL_CENTER" fill="#030303" fontSmoothingType="LCD" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="514.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
+<<<<<<< HEAD
             <Font name="Wide Latin" size="56.0" />
+=======
+            <Font size="58.0" />
+>>>>>>> 3ec84f9973743d7629e60e68f6bf28091c1c4290
          </font>
       </Text>
       <ImageView fx:id="man" fitHeight="133.0" fitWidth="98.0" layoutX="140.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" rotate="-2.7" />
