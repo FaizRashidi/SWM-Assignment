@@ -3,7 +3,7 @@
 // keeps the game moving forward.
 // This class is also the one that grabs key events.
 
-package com.neet.DiamondHunter.Main;
+package com.neet.DiamondHunter.Game;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -19,7 +19,7 @@ import com.neet.DiamondHunter.Manager.Keys;
 
 @SuppressWarnings("serial")
 public class GamePanel extends JPanel implements Runnable, KeyListener {
-	
+		
 	// dimensions
 	// HEIGHT is the playing area size
 	// HEIGHT2 includes the bottom window

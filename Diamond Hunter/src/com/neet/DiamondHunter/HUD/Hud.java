@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 import com.neet.DiamondHunter.Entity.Diamond;
 import com.neet.DiamondHunter.Entity.Player;
-import com.neet.DiamondHunter.Main.GamePanel;
+import com.neet.DiamondHunter.Game.GamePanel;
 import com.neet.DiamondHunter.Manager.Content;
 
 public class Hud {

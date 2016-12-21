@@ -9,12 +9,13 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
+import com.neet.DiamondHunter.Controllers.MapController;
 import com.neet.DiamondHunter.Entity.Diamond;
 import com.neet.DiamondHunter.Entity.Item;
 import com.neet.DiamondHunter.Entity.Player;
 import com.neet.DiamondHunter.Entity.Sparkle;
+import com.neet.DiamondHunter.Game.GamePanel;
 import com.neet.DiamondHunter.HUD.Hud;
-import com.neet.DiamondHunter.Main.GamePanel;
 import com.neet.DiamondHunter.Manager.Data;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.JukeBox;
@@ -55,6 +56,9 @@ public class PlayState extends GameState {
 	// transition box
 	private ArrayList<Rectangle> boxes;
 	
+	//int newAxePositionX,newAxePositionY,newBoatPositionX,newBoatPositionY;
+	MapController mapcontroller;
+	
 	public PlayState(GameStateManager gsm) {
 		super(gsm);
 	}
@@ -75,8 +79,18 @@ public class PlayState extends GameState {
 		player = new Player(tileMap);
 		
 		// fill lists
+		
 		populateDiamonds();
-		populateItems();
+		
+		if(MapController.flag == 0){
+			
+			populateItems();
+		
+		}else{
+			
+			populateItemsNewPosition();
+			
+		}
 		
 		// initialize player
 		player.setTilePosition(17, 17);
@@ -185,6 +199,35 @@ public class PlayState extends GameState {
 		items.add(item);
 		
 	}
+	
+	private void populateItemsNewPosition() {
+		
+		Item item;
+		
+		item = new Item(tileMap);
+		item.setType(Item.AXE);
+		item.setTilePosition(MapController.axePositionX, MapController.axePositionY);
+		System.out.println(MapController.axePositionX);
+		System.out.println(MapController.axePositionY);
+		items.add(item);
+		
+		item = new Item(tileMap);
+		item.setType(Item.BOAT);
+		item.setTilePosition(MapController.boatPositionX, MapController.boatPositionY);
+		System.out.println(MapController.boatPositionX);
+		System.out.println(MapController.boatPositionY);
+		items.add(item);
+		
+	}
+	
+	/*public void getData(int newAxepositionX,int newBoatpositionX, int newBoatpositionY, int newAxepositionY){
+		this.newAxePositionX = newAxepositionX;
+		this.newAxePositionY = newAxepositionY;
+		this.newBoatPositionX = newBoatpositionX;
+		this.newBoatPositionY = newBoatpositionY;
+		
+	}*/
+	
 	
 	public void update() {
 		
