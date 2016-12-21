@@ -14,7 +14,8 @@ public class MapUtilities {
     Image tileset;
     Image tiles[][];
     int tileSize = 16;
-    int map[][];
+    public static int newmaps[][];
+    int maps[][];
     
     int numCols,numRows;
 	private int x; //position of the player
@@ -72,7 +73,7 @@ public class MapUtilities {
 			
 			numCols = Integer.parseInt(br.readLine());
 			numRows = Integer.parseInt(br.readLine());
-			map = new int[numRows][numCols];
+			maps = new int[numRows][numCols];
 			
 			String delimiters = "\\s+";
 			
@@ -81,9 +82,11 @@ public class MapUtilities {
 				String[] tokens = line.split(delimiters);
 				
 				for(int col = 0; col < numCols; col++){
-					map[row][col] = Integer.parseInt(tokens[col]);
+					maps[row][col] = Integer.parseInt(tokens[col]);
 				}
 			 }
+			
+			newmaps = maps;
 		}
 		catch(Exception e){}	
 		
@@ -95,7 +98,7 @@ public class MapUtilities {
 		for(int row = 0; row <numRows; row++){
 			for( int col = 0; col <numCols; col++){
 								
-				int rc = map[row][col];
+				int rc = maps[row][col];
 				int r = rc / tiles[0].length;
 				int c = rc % tiles[0].length;
 				

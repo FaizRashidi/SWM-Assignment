@@ -1,14 +1,15 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.root {
-    -fx-background-image: url("http://s3.favim.com/610/140823/background-blue-diamond-transparent-Favim.com-2017490.jpg");
-}
+#pane {
+    -fx-background-image: url("/Image/Background.jpg");
 
+    }
+    
 .button{
 	-fx-background-color: tan;
-}
+	}
 
 .button:hover{
 	-fx-text-fill:whitesmoke;
-}
+	}
 
