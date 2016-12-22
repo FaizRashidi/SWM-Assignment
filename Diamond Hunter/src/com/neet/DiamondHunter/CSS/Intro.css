@@ -5,19 +5,16 @@
  	}
 
 .button{
-<<<<<<< HEAD
+
 	-fx-background-color: tan;
 	-fx-border-color: black;	
-=======
-	-fx-background-color: tan;	
->>>>>>> ce222f2590b003526af4d154a78e4e085339c516
 }
 
 .button:hover{
 	-fx-text-fill:whitesmoke;
 }
 
-@font-face{
+font-face{
 	font-family: Chargen;
 	src:url("/Font/6809 chargen.ttf");
 }

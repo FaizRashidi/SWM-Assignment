@@ -7,10 +7,9 @@
     
 .button{
 	-fx-background-color: tan;
-<<<<<<< HEAD
+
 	-fx-border-color: black;
-=======
->>>>>>> ce222f2590b003526af4d154a78e4e085339c516
+
 	}
 
 .button:hover{
