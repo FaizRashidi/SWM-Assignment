@@ -12,7 +12,7 @@ package com.neet.DiamondHunter.GameState;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-import com.neet.DiamondHunter.Main.GamePanel;
+import com.neet.DiamondHunter.Game.GamePanel;
 import com.neet.DiamondHunter.Manager.Content;
 import com.neet.DiamondHunter.Manager.Data;
 import com.neet.DiamondHunter.Manager.GameStateManager;

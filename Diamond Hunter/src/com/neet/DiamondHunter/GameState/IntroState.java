@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
 
-import com.neet.DiamondHunter.Main.GamePanel;
+import com.neet.DiamondHunter.Game.GamePanel;
 import com.neet.DiamondHunter.Manager.GameStateManager;
 import com.neet.DiamondHunter.Manager.Keys;
 
