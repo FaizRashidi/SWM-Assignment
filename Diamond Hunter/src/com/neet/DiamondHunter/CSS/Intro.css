@@ -5,7 +5,8 @@
  	}
 
 .button{
-	-fx-background-color: tan;	
+	-fx-background-color: tan;
+	-fx-border-color: black;	
 }
 
 .button:hover{
