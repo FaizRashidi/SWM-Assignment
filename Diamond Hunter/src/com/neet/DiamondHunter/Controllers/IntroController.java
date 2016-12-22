@@ -6,7 +6,6 @@ package com.neet.DiamondHunter.Controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +19,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
- * 
  * @author Muhammad Faiz Bin Mohd Rashidi
  * @version 2.0 22/12/16
  * 

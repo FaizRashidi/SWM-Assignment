@@ -27,13 +27,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
- * 
  * @author Muhammad Faiz Bin Mohd Rashidi
  * 
  * This Class handles the display of the map, 
  * and the setting of new position for the items.
  * Also handles the input from the user.
- *
  */
 public class MapController implements Initializable {
 	
@@ -212,7 +210,7 @@ public class MapController implements Initializable {
 			
 			flag = 1;
 			
-			playGame = new Game();								//Runs the game
+			playGame = new Game();					//Runs the game
 			playGame.runGame(null);
 		}
 	}
