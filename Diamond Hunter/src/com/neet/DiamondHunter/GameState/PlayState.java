@@ -56,9 +56,6 @@ public class PlayState extends GameState {
 	// transition box
 	private ArrayList<Rectangle> boxes;
 	
-	//int newAxePositionX,newAxePositionY,newBoatPositionX,newBoatPositionY;
-	MapController mapcontroller;
-	
 	public PlayState(GameStateManager gsm) {
 		super(gsm);
 	}
@@ -82,14 +79,13 @@ public class PlayState extends GameState {
 		
 		populateDiamonds();
 		
+		/*if player skips the map editing part, items will be on
+		 *their default position
+		 */
 		if(MapController.flag == 0){
-			
 			populateItems();
-		
-		}else{
-			
-			populateItemsNewPosition();
-			
+		}else{		
+			populateItemsNewPosition();						/*New Position*/
 		}
 		
 		// initialize player
@@ -207,27 +203,14 @@ public class PlayState extends GameState {
 		item = new Item(tileMap);
 		item.setType(Item.AXE);
 		item.setTilePosition(MapController.axePositionX, MapController.axePositionY);
-		System.out.println(MapController.axePositionX);
-		System.out.println(MapController.axePositionY);
 		items.add(item);
 		
 		item = new Item(tileMap);
 		item.setType(Item.BOAT);
 		item.setTilePosition(MapController.boatPositionX, MapController.boatPositionY);
-		System.out.println(MapController.boatPositionX);
-		System.out.println(MapController.boatPositionY);
 		items.add(item);
 		
 	}
-	
-	/*public void getData(int newAxepositionX,int newBoatpositionX, int newBoatpositionY, int newAxepositionY){
-		this.newAxePositionX = newAxepositionX;
-		this.newAxePositionY = newAxepositionY;
-		this.newBoatPositionX = newBoatpositionX;
-		this.newBoatPositionY = newBoatpositionY;
-		
-	}*/
-	
 	
 	public void update() {
 		

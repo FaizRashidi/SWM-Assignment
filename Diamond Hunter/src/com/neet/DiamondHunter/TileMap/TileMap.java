@@ -280,34 +280,9 @@ public class TileMap {
 					x + col * tileSize,
 					y + row * tileSize,
 					null
-				);
-				
-			}
-			
-		}
-		
+				);				
+			}			
+		}		
 	}
-	
-	//To draw the map after the settings of data and dimensions have been inserted via loadTiles & loadMap 
-	public void drawMapViewer(Graphics2D g){
-		for(int row = 0; row <numRows; row++){
-			for( int col = 0; col <numCols; col++){
-								
-				int rc = map[row][col];
-				int r = rc / tiles[0].length;
-				int c = rc % tiles[0].length;
-				
-				g.drawImage(
-						tiles[r][c].getImage(),
-						x + col * tileSize,
-						y + row * tileSize,
-						null
-						);		
-				
-			}
-		}
-	}
-
-	
 }
 

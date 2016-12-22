@@ -1,6 +1,8 @@
+/*
+ * 	Main.Java	v2.0  22/12/16
+ */
 package com.neet.DiamondHunter.MainExecutable;
 
-//This class contains acts as the main executable for the mapViewer and the game.
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -8,7 +10,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 
+/*
+ *  Loads the object from an FXML object and loads it into a scene.
+ *	A stage is used to load the current scene.
+ *	Picture of a diamond is selected as the program Icon
+ */
 public class Main extends Application {
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -26,7 +34,7 @@ public class Main extends Application {
 		}
 	}
 	
-	
+	/*Launch the User Interface */
 	public static void main(String[] args) {
 		launch(args);
 	}

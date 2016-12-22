@@ -20,9 +20,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="setMapButton" layoutX="56.0" layoutY="274.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="63.0" prefWidth="141.0" text="Set Map">
+      <Button fx:id="setMapButton" layoutX="56.0" layoutY="274.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="63.0" prefWidth="141.0" text="Edit Map">
          <font>
-            <Font name="Wide Latin" size="17.0" />
+            <Font name="Wide Latin" size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -48,19 +48,19 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Text fontSmoothingType="LCD" layoutX="71.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Diamond Hunter Game!" textAlignment="CENTER" wrappingWidth="316.2149658203125">
+      <Text fontSmoothingType="LCD" layoutX="97.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Diamond Hunter Game!" textAlignment="CENTER" wrappingWidth="262.2149658203125">
          <font>
             <Font name="Wide Latin" size="22.0" />
          </font>
       </Text>
-      <Text layoutX="71.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to skip to the game?" textAlignment="CENTER" wrappingWidth="317.001953125">
+      <Text layoutX="91.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Would you like to skip to the game?" textAlignment="CENTER" wrappingWidth="277.001953125">
          <font>
             <Font name="Wide Latin" size="14.0" />
          </font>
       </Text>
-      <Text layoutX="72.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Or edit the Item's position?">
+      <Text layoutX="83.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Or edit the Item's position?">
          <font>
-            <Font name="Wide Latin" size="14.0" />
+            <Font name="Wide Latin" size="13.0" />
          </font>
       </Text>
    </children>
