@@ -1,33 +1,48 @@
+/*
+ * MapUtilites.java  v2.0  22/12/16
+ */
 package com.neet.DiamondHunter.MapViewer;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 
+/**
+ * @author Muhammad Faiz Bin Mohd Rashidi
+ * 
+ * This class reads the map from the external file "tilemap.map"
+ * and loads image "tileset.gif"
+ * 
+ * This class also draws the map 
+ */
 public class MapUtilities {
 	
+	//Map image
     Image tileset;
     Image tiles[][];
-    int tileSize = 16;
-    public static int newmaps[][];
-    int maps[][];
     
+    //For Position validation reference in the mapController class
+    public static int newmaps[][];
+    
+    int maps[][];
+    int tileSize = 16;
     int numCols,numRows;
-	private int x; //position of the player
-	private int y; //position of the player
 
+    /**
+     * @param tileSetFile is the path of the tileset.gif
+     * This method reads the image, and cut in tiles.
+     */
 	public void loadTile(String tileSetFile) {
 
 		try{
-			
 			tileset = new Image(tileSetFile);
 			
 			int numTilesAcross = (int) ((tileset.getWidth())/(tileSize));
+			
 			tiles = new Image[2][numTilesAcross];
 			
 		    PixelReader pixelreader = tileset.getPixelReader();
@@ -51,15 +66,16 @@ public class MapUtilities {
 				
 				tiles[1][col] = newImage2;
 			}
-			
-			
 		}
 		catch(Exception e){
 			e.printStackTrace();
 		}
-		
 	}
 
+	/**
+	 * @param testMapFile is the path of the TestMap.map file 
+	 * This class reads and stores the lines inside the files.
+	 */
 	public void loadMap(String testMapFile) {
 
 		try{
@@ -86,13 +102,16 @@ public class MapUtilities {
 				}
 			 }
 			
-			newmaps = maps;
+			newmaps = maps;				//For references
 		}
 		catch(Exception e){}	
-		
 	}
-	
 
+	/**
+	 * @param gc is the graphics context of the FXML canvas objects
+	 * This method draws the map based from the position read from the tilemap 
+	 * and load the position with the image obtained from loadTile method
+	 */
 	public void drawMapViewer(GraphicsContext gc) {
 
 		for(int row = 0; row <numRows; row++){
@@ -104,13 +123,10 @@ public class MapUtilities {
 				
 				gc.drawImage(
 						tiles[r][c],
-						x + col * tileSize,
-						y + row * tileSize
+						col * tileSize,
+						row * tileSize
 						);		
-				
 			}
 		}
-	
 	}
-	
 }
